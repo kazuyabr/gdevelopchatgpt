@@ -1,0 +1,12 @@
+version: '3'
+services:
+  gdevelopgpt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:80"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
